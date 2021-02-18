@@ -1,1 +1,277 @@
-# GoogleSummerOfCode2021
+﻿# Scala Center - Google Summer of Code 2021 Project Ideas
+
+## Scala-native-bindgen
+
+|Title                |Scala-native-bindgen|
+|---------------------|-|
+|Brief description    | [Scala-native-bindgen](https://github.com/scala-native/scala-native-bindgen) is an sbt plugin used to generate [Scala Native] bindings code based on input C headers. The goal of this project is to enhance its functionality to generate C headers for libraries build using Scala Native as well as align it with syntax changes done in Scala Native. |
+|Expected outcome     | Bindgen should be usable with  [Scala Native] 0.4 changed syntax. It should allow to generate header files for libraries created using Scala Native based on NIR input.|
+|Prerequisites        | Scala, [Scala Native] basics, C++, sbt|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Wojciech Mazur] |
+
+## Make scalajs-jfe production-ready
+
+|Title                | Make scalajs-jfe production-ready|
+|---------------------|-|
+|Brief description    | [scalajs-jfe](https://github.com/arthanzel/scalajs-jfe) is a proof-of-concept Java compiler front-end for the [Scala.js] Intermediate Representation (IR, .sjsir files). Its purpose is to be able to use libraries written in Java from Scala.js projects. The compiler misses support for a few language features, but the main missing piece is integration in a build tool, so that it can be used in an actual project. The goal of this project is to bring scalajs-jfe to the masses, by providing an integration in sbt (the Scala build tool) and address the few missing features in the compiler.|
+|Expected outcome     | scalajs-jfe should be usable in a real project, both to use Java source files in a [Scala.js] project, or to publish a library written in Java as a Scala.js-enabled jar.|
+|Prerequisites        | basic Scala knowledge; basic knowledge about compilers; having used a build tool in a project; git basics.|
+|Ideal prerequisites  | larger compiler experience; sbt knowledge; possibly having written a build tool plugin before; and/or larger Scala experience.|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Sébastien Doeraene]|
+
+## Module splitting in scalajs-bundler
+
+|Title                |	Module splitting in scalajs-bundler|
+|---------------------|-|
+|Brief description    | [Scala.js] recently added support for module splitting. Instead of producing one .js file, it can be configured to produce multiple .js files. However, [scalajs-bundler](https://scalacenter.github.io/scalajs-bundler/) eventually bundles all the modules into a single .js file, making it impossible to produce multiple modules. Producing multiple modules could be useful in some scenarios, as explained in webpack’s documentation. The goal of this project is to support generating multiple modules in scalajs-bundler.|
+|Expected outcome     | Scalajs-bundler should support the scenarios that require producing multiple bundles. The documentation should be updated accordingly.|
+|Prerequisites        | Familiarity with Scala, JavaScript, and webpack|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Sébastien Doeraene], [Julien Richard-Foy]|
+
+## Port shapeless-2.x to Scala 3
+
+|Title                |Port shapeless-2.x to Scala 3|
+|---------------------|-|
+|Brief description    | [Shapeless] is a library that pioneered type class derivation facilities. It has been powering a large number of libraries that derive type classes (e.g. data type serializers). The underlying mechanisms on which shapeless is built to provide its type class derivation facilities do not exist anymore in Scala 3. Nevertheless, the next major version of Shapeless will support Scala 3. However, this means that libraries that work with the current stable version of Shapeless will have to upgrade to the next major version of Shapeless to support Scala 3. The story might become even more complicated for libraries that cross-compile with several versions of Scala. The migration effort for these libraries would be significantly reduced if the current stable version of Shapeless was available on Scala 3. The goal of this project is to implement the current version (2.3) of Shapeless on Scala 3. A meta-issue summarizing the tasks to achieve this has been created here.|
+|Expected outcome     | Libraries that use [Shapeless] 2 can compile with Scala 3.|
+|Prerequisites        | Familiarity with Scala, meta-programming, type class derivation.|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Julien Richard-Foy]|
+
+## Semantic highlighting for Scala code in [Metals]
+
+|Title                | Semantic highlighting for Scala code in [Metals]|
+|---------------------|-|
+|Brief description    | Implement support for [Semantic Highlighting](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide) for Scala code in [Metals]. More info [here](https://github.com/scalameta/metals-feature-requests/issues/57) and  [here](https://microsoft.github.io/language-server-protocol/specifications/specification-current/#textDocument_semanticTokens)|
+|Expected outcome     | Implemented semantic highlighting LSP Api|
+|Prerequisites        | Knowledge of Scala|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Tomasz Godzik], [Chris Kipp]|
+
+## Add missing LSP extensions to [Metals]
+
+|Title                | Add missing LSP extensions to [Metals]|
+|---------------------|-|
+|Brief description    | Implement the following LSP endpoints in [Metals]: [`textDocument/selectionRange`](https://microsoft.github.io/language-server-protocol/specifications/specification-3-15/#textDocument_selectionRange) [`textDocument/callHierarchy`](https://microsoft.github.io/language-server-protocol/specifications/specification-current/#textDocument_prepareCallHierarchy)|
+|Expected outcome     | Editors that support selection ranges and call hierarchies can benefit from using both of these features from [Metals].|
+|Prerequisites        | Knowledge of Scala and a bit of compiler knowledge|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Chris Kipp]|
+
+## Add synthetics and symbol information for semanticdb in Scala 3
+
+|Title                | Add synthetics and symbol information for semanticdb in Scala 3|
+|---------------------|-|
+|Brief description    | [semanticdb](https://scalameta.org/metals/) is a format that saves additional data about symbols within files as a results of compilation. These additional artifacts enable Scala editors and tools to provide additional functionalities. Currently, Scala 3 only emits basic symbol occurrences without the information about the specific symbol signatures and additional synthetic symbols generated by the compiler.|
+|Expected outcome     | Scala 3 compiler generating fully filled new sections.|
+|Prerequisites        | Knowledge of Scala, compilers.|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Tomasz Godzik] |
+
+## Automatically rerun tests on code changes within [Metals] LSP server
+
+|Title                | Automatically rerun tests on code changes within [Metals] LSP server|
+|---------------------|-|
+|Brief description    | Currently [Metals] LSP server supports the Debug Adapter Protocol via code lenses or `launch.json` configuration. The output from the tests goes to the basic Debug Console within Visual Studio Code. To make it all more usable we need to create a basic UI that would enable users to trigger `watch` , which would recompile and run tests on changes, and would present the information from tests to the users. It should also include some basic work to make this possible to implement in other editors.|
+|Expected outcome     | VS Code [Metals] extension with the possibility to watch tests.|
+|Prerequisites        | Knowledge of Scala, Typescript, LSP|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Tomasz Godzik]|
+
+## Interoperability with Java Language server
+
+|Title                | Interoperability with Java Language server|
+|---------------------|-|
+|Brief description    | Currently [Metals] LSP server does not support Java files, so in workspaces with mixed sources users will be unable to get full support. It should be possible to delegate some of the functionalities to a java language server and combine the results with those for Scala files|
+|Expected outcome     | Working `textDocument/definition` , `textDocument/references` , `textDocument/rename` and `textDocument/completions` within Java files.|
+|Prerequisites        | Knowledge of Scala and Java|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Tomasz Godzik]|
+
+## Automatic imports of implicits
+
+|Title                | Automatic imports of implicits|
+|---------------------|-|
+|Brief description    | It should be possible to automatically suggest to users what they need to import in case of missing givens (implicits) or extension methods in their code. The base functionality should be implemented for Scala 3 and if time allows we could extend it to work with Scala 2.|
+|Expected outcome     | Code action to suggest imports on error and completions that will automatically add those.|
+|Prerequisites        | Knowledge of Scala and compilers.|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Tomasz Godzik]|
+
+## Integration of the scala-debug-adapter in [Mill]
+
+|Title                | Integration of the scala-debug-adapter in [Mill]|
+|---------------------|-|
+|Brief description    | The [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) is the server side implementation of the [Debug Adapter Protocol (DAP)](https://microsoft.github.io/debug-adapter-protocol/) for the Scala language. It is used inside editors like VS Code to debug a Scala program. [Mill] is a build tool of the Scala ecosystem. The goal of this project is to integrate the scala-debug-adapter inside the Mill build tool so that it is easy to debug a Mill project from within a text editor.|
+|Expected outcome     | Tested integration of the scala-debug-adapter in a fork of the [Mill] repository that is ready to be submitted upstream.|
+|Prerequisites        | Knowledge about Scala and JVM; familiarity with a build tool (sbt, Maven, Gradle, [Mill]…)|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Adrien Piquerez]|
+
+## Implement compilation progress in sbt
+
+|Title                | Implement compilation progress in sbt|
+|---------------------|-|
+|Brief description    | Sbt is the most used build tool of the Scala ecosystem. It relies on [Zinc] to compile Scala projects incrementally (when you change your code, only the impacted files are re-compiled). Zinc can also report progress (in %) during compilation but sbt does not yet use that information. The goal of this project is to add a compilation progress  reporter in sbt. This reporter can print the compilation progress to the shell or send progress notifications through the network (BSP).|
+|Expected outcome     | Add some sort of CompilationProgressReporter interface to sbt and give a default implementation.|
+|Prerequisites        | Knowledge about Scala; familiarity with a build tool (sbt, Maven, Gradle, [Mill]…)|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Adrien Piquerez]|
+
+## Improve the [Scaladex] UX and UI
+
+|Title                | Improve the [Scaladex] UX and UI|
+|---------------------|-|
+|Brief description    | [Scaladex] is the catalogue website of the Scala open source projects. It is populated by data from Maven Central and Github. The goal of this project is to modernize the Scaladex frontend by leveraging the [Scala.js] technology. It will be encouraged to experiment with Scala.js framework and libraries, like scalajs-react, laminar or others.|
+|Expected outcome     | Contributions to the [Scaladex] frontend|
+|Prerequisites        | Knowledge about html, css, Javascript and Scala|
+|Estimated difficulty | Medium|
+|Potential mentors    |[Adrien Piquerez]|
+
+## Course Management Tools - Apply Enhancements
+
+|Title                | Course Management Tools - Apply Enhancements|
+|---------------------|-|
+|Brief description    | [The Course Management Tools (CMT)](https://eloots.github.io/course-management-tools/) is a toolset that allows one to manage exercises source code in an efficient manner. The tooling has been designed to manage Scala or Java exercises where the ‘s project build tool is sbt. CMT is an open source project and can be found here.|
+|Expected outcome     | Adapt the tooling to: create and publish an sbt plugin that can be used for a so-called ‘studentified’ project, adapt the tool to support Maven based projects|
+|Prerequisites        | Knowledge of Scala, sbt and Maven.|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Eric Loots]|
+
+## [Coursier] - Autocompletion
+
+|Title                | [Coursier] - Autocompletion|
+|---------------------|-|
+|Brief description    | The CLI of [Coursier] has a number of commands to interact with artifacts from Maven repositories: listing transitive dependencies, fetching full class paths, starting an application, … These commands take Maven dependencies as input, such as 'org:name: X. Y. Z', but also repository names, application names, Scala versions, main class names, etc. Yet, Coursier doesn't allow to complete these arguments via bash or zsh completion, even though its API has the ability to complete Maven dependencies.|
+|Expected outcome     | Allow users to install bash and zsh completions for the coursier CLI, offering completions for:  options that each sub-command accepts, application names, Maven dependencies,  repositories, Scala versions, main classes.|
+|Prerequisites        | Knowledge of Scala, [Coursier], auto-completion driven from a command shell|
+|Estimated difficulty | Hard|
+|Potential mentors     | [Eric Loots], [Alexandre Archambault]|
+
+## Write a compatible `ExplicitResultTypes` rule for Scala 3
+
+|Title                | Write a compatible `ExplicitResultTypes` rule for Scala 3|
+|---------------------|-|
+|Brief description    | [Scalafix] provides rules that rewrite or lint your code. One of them is ExplicitResultTypes, that add explicit types to def/val/var. This rule is linked to Scala 2 compiler. We need to rewrite it to interface with the Scala 3 compiler.|
+|Expected outcome     | A working `ExplicitResultTypes` |
+|Prerequisites        |	Required: some experience with Scala, eagerness to learn more about Scala 3. Preferred: some familiarity with [Scalafix] and Scalameta.|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Meriam Lachkar]|
+
+## Implement support for some scientific computing libraries in Scala 3
+
+|Title                | Implement support for some scientific computing libraries in Scala 3|
+|---------------------|-|
+|Brief description    | There exist a number of projects important to scientific computing in Scala 2 that have not yet been ported to Scala 3. Some known such libraries are: [ScalaPy], [Almond], [Spire](https://github.com/typelevel/spire). Having these in Scala 3 would contribute to the adoption of Scala 3 as a language for scientific computing. The goal of this project is to implement the Scala 3 support for some of these libraries and their dependencies (if there is such a need).|
+|Expected outcome     | One or more library from the list is ported to Scala 3.|
+|Prerequisites        | Required: some experience with Scala, eagerness to learn more about Scala 3. Preferred: some familiarity with compilers and scientific computing.|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Anatolii Kmetiuk], [Alexandre Archambault], [Shadaj Laddad] |
+
+## Exhaustivity check for abstract ADTs
+
+|Title                | Exhaustivity check for abstract ADTs|
+|---------------------|-|
+|Brief description    | Exhaustivity check is the safety belt for pattern matching on ADTs in functional programming. However, the safety guarantee is compromised in a programming style that uses types as safety guarantees based on abstract types and [opaque types (SIP-35)](https://docs.scala-lang.org/sips/opaque-types.html). One concrete example is to support exhaustivity check for the Peano example.|
+|Expected outcome     | An open PR to Dotty|
+|Prerequisites        | Experienced in Scala programming|
+|Estimated difficulty | Hard|
+|Potential mentors    | [Dale Wijnand] , [Fengyun Liu]|
+
+## Scaladoc: backlinks and smart snippets
+
+|Title                | Scaladoc: backlinks and smart snippets|
+|---------------------|-|
+|Brief description    | Scala 3's new Scaladoc comes with built-in support for static sites. Here's one way we can use this to enable static sites of Scala libraries: add backlinks and smart code snippets. The idea is to let people easily jump from the static site to API documentation and back again. To help the "back again" part, we can automatically detect what static pages link to a definition, and list them on the definition's page. This is "backlinking" as implemented by [Roam](https://roamresearch.com) and [Notion](https://notion.so). With this, someone viewing the documentation for [Cats' Functor#map](https://typelevel.org/cats/api/cats/Functor.html) will easily notice that there's a [static page](https://typelevel.org/cats/typeclasses/functor.html) explaining the ideas behind the definition. Beyond that, we can also add backlinks when a definition is mentioned in a code snippet (note that Scaladoc will compile code snippets). Then, when we get some experience working with code snippets, we can add hyperlinks to all the definitions in the snippet. This will make the connection between static pages and definition pages even more seamless.|
+|Expected outcome     | Open PR to Scaladoc with a cool new feature|
+|Prerequisites        | Scala knowledge|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Aleksander Boruch-Gruszecki]|
+
+## [ScalaPy] support in [Ammonite] and [Almond]
+
+|Title                | [ScalaPy] support in [Ammonite] and [Almond]|
+|---------------------|-|
+|Brief description    | [Ammonite] is a batteries-included REPL and script runner for Scala, and [Almond] is a Scala kernel for Jupyter built on top of Ammonite. [ScalaPy] is a Scala library that allows Scala code to invoke Python code and use Python libraries. We'd like to make it easier to use ScalaPy from Ammonite and Almond, by adding options to Ammonite and Almond so that ScalaPy can be used straight away from them, without requiring new dependencies or new imports, by offering completions right after the 'py' object. |
+|Expected outcome     | Users can pass an option to [Ammonite] to start it with [ScalaPy] already loaded, and start to tap into Python libraries straightaway. Ammonite offers completions when accessing the 'py' object. Users can install [Almond] with an option to have it load ScalaPy when kernels start, so that users can use ScalaPy right from the first cell, and Almond offers completions when accessing the 'py' object and relies on the `_repr_html_ / _repr_png_ / ...` methods of Python objects to display them.|
+|Prerequisites        | Scala and python knowledge|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Alexandre Archambault]|
+
+
+## Support for Jupyter-aware Python libraries in [ScalaPy]
+
+|Title                | Support for Jupyter-aware Python libraries in [ScalaPy]|
+|---------------------|-|
+|Brief description    | [ScalaPy] is a Scala library that allows Scala code to invoke Python code and use Python libraries. Python has a rich ecosystem of scientific computing libraries, and, if we want to facilitate their usage in Scala, it is important for ScalaPy to cater to the needs faced by the scientists. One of such needs is reproducible research as e.g. implemented in Jupyter Notebook. A lot of Python libraries know how to communicate with Jupyter Notebook via the API of the latter. If we want ScalaPy-powered ports of these libraries to also fully support Jupyter Notebooks, we need to port this API to Scala using ScalaPy.|
+|Expected outcome     | Jupyter Notebook API is ported to Scala using [ScalaPy]. Ensure that Python libraries that rely on that API can still use it when utilised from Scala code using ScalaPy.|
+|Prerequisites        | Scala and Python knowledge|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Shadaj Laddad], [Alexandre Archambault] |
+
+## Type Facade Generation
+
+|Title                | Type Facade Generation|
+|---------------------|-|
+|Brief description    | [ScalaPy] is a Scala library that allows Scala code to invoke Python code and use Python libraries. One of the important features in Scala programming is its versatile type system. And so, to utilise Scala's potential to the fullest with the Python libraries, we need to declare the Scala types for the Python libraries before using them from ScalaPy. This process, however, can be automated. This is because Python has a limited support for type declaration via type hints. ScalaPy can read these hints and generate the appropriate Scala types from them via macros.
+|Expected outcome     | It is possible to automatically generate typed Scala APIs when working with Python libraries from [ScalaPy].|
+|Prerequisites        | Scala, Metaprogramming|
+|Estimated difficulty | Medium/Hard|
+|Potential mentors    | [Shadaj Laddad]|
+
+## Porting [Monix] to Scala 3
+
+|Title                | Porting [Monix] to Scala 3|
+|---------------------|-|
+|Brief description    | [Monix] is a popular library for concurrent and parallel programming in Scala, building on top of the abstractions provided by [Cats Effect]. The goal of this project is to port Monix to Scala 3. Additionally, time permitting, it could also be ported to Cats Effect 3.|
+|Expected outcome     | [Monix] cross-building for Scala 2.12, 2.13 and 3. Monix supporting [Cats Effect] 3|
+|Prerequisites        | Scala, Metaprogramming |
+|Estimated difficulty | Medium |
+|Potential mentors    | [Lars Hupel]|
+
+## Improving performance of type class operators
+
+|Title                | Improving performance of type class operators|
+|---------------------|-|
+|Brief description    | [Spire], [Cats] and a few other libraries provide syntactic sugar for common type class operations, such as addition on monoids. Spire provides built-in macros to inline such operations, avoiding allocations and improving performance. Cats provides no such mechanisms. In this project, you should build a Scala 3 library for inlining operator calls.|
+|Expected outcome     | Scala 3 library for efficient type class operations|
+|Prerequisites        | Scala, Metaprogramming |
+|Estimated difficulty | Hard |
+|Potential mentors    | [Lars Hupel]|
+
+
+[Almond]: https://almond.sh/
+[Ammonite]: https://ammonite.io/
+[Cats Effect]: https://typelevel.org/cats-effect/
+[Cats]: https://typelevel.org/cats/
+[Coursier]: https://get-coursier.io/ 
+[Metals]: https://scalameta.org/metals/
+[Mill]: http://www.lihaoyi.com/mill/
+[Monix]: https://monix.io/
+[Scala Native]: https://scala-native.readthedocs.io
+[Scala.js]: https://www.scala-js.org/
+[ScalaPy]: https://scalapy.dev/
+[Scaladex]: https://index.scala-lang.org/
+[Scalafix]: https://scalacenter.github.io/scalafix/
+[Shapeless]: https://github.com/milessabin/shapeless
+[Spire]: https://github.com/typelevel/spire
+[Zinc]: https://github.com/sbt/zinc
+
+[Adrien Piquerez]: https://github.com/adpi2
+[Aleksander Boruch-Gruszecki]: https://github.com/abgruszecki
+[Alexandre Archambault]: https://github.com/alexarchambaul
+[Anatolii Kmetiuk]: https://github.com/anatoliykmetyu
+[Chris Kipp]: https://github.com/ckipp01
+[Dale Wijnand]: https://github.com/dwijnand
+[Eric Loots]: https://github.com/eloot
+[Fengyun Liu]: https://github.com/liufengyun
+[Julien Richard-Foy]: https://github.com/julienrf
+[Lars Hupel]: https://github.com/larsrh
+[Meriam Lachkar]: https://github.com/mlachkar
+[Shadaj Laddad]: https://github.com/shadaj
+[Sébastien Doeraene]: https://github.com/sjrd
+[Tomasz Godzik]: https://github.com/tgodzi
+[Wojciech Mazur]: https://github.com/WojciechMazur
