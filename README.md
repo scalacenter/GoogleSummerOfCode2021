@@ -53,6 +53,7 @@ interfaces, education and functional programming.
  - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
  - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
  - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
+ - [Integrating Metals with bazel-bsp](#Integrating-Metals-with-bazel-bsp)
 
 ## By topic
 
@@ -84,6 +85,7 @@ in multiple categories.
     - [Implement compilation progress in sbt](#Implement-compilation-progress-in-sbt)
     - [Coursier - Autocompletion](#Coursier---Autocompletion)
     - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
+    - [Integrating Metals with bazel-bsp](#Integrating-Metals-with-bazel-bsp)
  - User experience
     - [Improve the Scaladex UX and UI](#Improve-the-Scaladex-UX-and-UI)
     - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
@@ -356,6 +358,16 @@ in multiple categories.
 |Estimated difficulty | Medium|
 |Potential mentors    | [Krzysztof Romanowski], [Mateusz Ziarko]|
 
+### Integrating Metals with bazel-bsp
+
+|Title                | Integrating Metals with bazel-bsp |
+|---------------------|-|
+|Brief description    | Implement support for [Bazel](https://bazel.build/) in [Metals] using [bazel-bsp](https://github.com/JetBrains/bazel-bsp) to take advantage of JetBrains’s efforts to have a build server protocol integration (BSP) for Bazel. This would entail adding support to globs to BSP, ironing out integration quirks and benchmarking performance. The Bazel IJ plugin is often many versions behind the current Bazel version. This effort would enable us to support new versions quickly for all tools that require Bazel integration such as metals.|
+|Expected outcome     | A working proof of concept which uses Metals with bazel-bsp and a roadmap for how to productionize the support.|
+|Prerequisites        | Familiarity with Bazel, LSP, BSP, and VSCode.|
+|Estimated difficulty | Medium |
+|Potential mentors    | [Felix Mulder]|
+
 [Almond]: https://almond.sh/
 [Ammonite]: https://ammonite.io/
 [Cats Effect]: https://typelevel.org/cats-effect/
@@ -381,6 +393,7 @@ in multiple categories.
 [Chris Kipp]: https://github.com/ckipp01
 [Dale Wijnand]: https://github.com/dwijnand
 [Eric Loots]: https://github.com/eloot
+[Felix Mulder]: https://github.com/felixmulder
 [Fengyun Liu]: https://github.com/liufengyun
 [Julien Richard-Foy]: https://github.com/julienrf
 [Krzysztof Romanowski]: https://github.com/romanowski
