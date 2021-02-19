@@ -2,7 +2,8 @@
 
 ## Summary & goals
 
-[The Scala Center](https://scala.epfl.ch/) organisation and its team are dedicated to moving a needle towards a more diverse community, (amongst other) by providing easy-to-access first experience and introduction to the Scala ecosystem. GSoC is a fantastic opportunity to engage with students all around the world and onboard new generations, as well as underrepresented groups in tech!
+[The Scala Center](https://scala.epfl.ch/) organisation and its team are dedicated to moving the needle towards a more diverse community, (amongst other) by providing easy-to-access first experience and introduction to the Scala ecosystem. GSoC is a fantastic opportunity to engage with students all around the world and onboard new generations, as well as underrepresented groups in tech!
+
 
 Scala is a part of Google Summer of Code since 2010. With 65 projects & students, ~70 mentors over the years, many of whom continued contributing to Scala, we are happy to announce that in 2021 the Scala Center will reignite the collaboration and commit to providing an awesome experience going forward.
 
@@ -398,4 +399,3 @@ in multiple categories.
 [Sébastien Doeraene]: https://github.com/sjrd
 [Tomasz Godzik]: https://github.com/tgodzi
 [Wojciech Mazur]: https://github.com/WojciechMazur
-
