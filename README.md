@@ -350,11 +350,11 @@ in multiple categories.
 
 |Title                | Runnable and embeddable snippets for Scala 3|
 |---------------------|-|
-|Brief description    | [Scastie] is an online REPL for Scala. The tool provides a good way to be embed snippets within websites containing documentation, tutorials or blosposts. Tools such as scaladoc should be able to precompile and embed the snippets with provided settings like classpath or compiler options. Compiling and running many snippets may require quite a lot of resources so some effort should be put to create a set of caches or to offload parts of work into tools such as scaladoc.|
+|Brief description    | [Scastie] is an online REPL for Scala. The tool does not provide a good way to embed snippets within websites containing documentation, tutorials or blosposts. Tools such as scaladoc should be able to precompile and embed the snippets with provided settings like classpath or compiler options. Compiling and running many snippets may require quite a lot of resources so some effort should be put to create a set of caches or to offload parts of work into tools such as scaladoc.|
 |Expected outcome     | Ability to embed Scastie-powered snippets into any web page as well as integration with scaladoc 3.x|
 |Prerequisites        | Knowledge of Scala as well as front-end development|
 |Estimated difficulty | Medium|
-|Potential mentors    | [Krzysztof Romanowski], Marcin Amman|
+|Potential mentors    | [Krzysztof Romanowski], [Marcin Aman]|
 
 [Almond]: https://almond.sh/
 [Ammonite]: https://ammonite.io/
@@ -383,10 +383,11 @@ in multiple categories.
 [Eric Loots]: https://github.com/eloot
 [Fengyun Liu]: https://github.com/liufengyun
 [Julien Richard-Foy]: https://github.com/julienrf
+[Krzysztof Romanowski]: https://github.com/romanowski 
 [Lars Hupel]: https://github.com/larsrh
+[Marcin Aman]: https://github.com/MarcinAman
 [Meriam Lachkar]: https://github.com/mlachkar
 [Shadaj Laddad]: https://github.com/shadaj
 [Sébastien Doeraene]: https://github.com/sjrd
 [Tomasz Godzik]: https://github.com/tgodzi
 [Wojciech Mazur]: https://github.com/WojciechMazur
-[Krzysztof Romanowski]: https://github.com/romanowski 
