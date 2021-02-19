@@ -46,7 +46,7 @@ interfaces, education and functional programming.
  - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
  - [Implement support for some scientific computing libraries in Scala 3](#Implement-support-for-some-scientific-computing-libraries-in-Scala-3)
  - [Exhaustivity check for abstract ADTs](#Exhaustivity-check-for-abstract-ADTs)
- - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+ - [Scaladoc backlinks and smart snippets](#Scaladoc-backlinks-and-smart-snippets)
  - [ScalaPy support in Ammonite and Almond](#ScalaPy-support-in-Ammonite-and-Almond)
  - [Support for Jupyter-aware Python libraries in ScalaPy](#Support-for-Jupyter-aware-Python-libraries-in-ScalaPy)
  - [Type Facade Generation](#Type-Facade-Generation)
@@ -67,7 +67,7 @@ in multiple categories.
     - [Port shapeless-2.x to Scala 3](#Port-shapeless-2.x-to-Scala-3)
     - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
     - [Exhaustivity check for abstract ADTs](#Exhaustivity-check-for-abstract-ADTs)
-    - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+    - [Scaladoc backlinks and smart snippets](#Scaladoc-backlinks-and-smart-snippets)
     - [Type Facade Generation](#Type-Facade-Generation)
     - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
     - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
@@ -87,7 +87,7 @@ in multiple categories.
  - User experience
     - [Improve the Scaladex UX and UI](#Improve-the-Scaladex-UX-and-UI)
     - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
-    - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+    - [Scaladoc backlinks and smart snippets](#Scaladoc-backlinks-and-smart-snippets)
     - [Implement compilation progress in sbt](#Implement-compilation-progress-in-sbt)
     - [Coursier - Autocompletion](#Coursier---Autocompletion)
  - Education
@@ -285,7 +285,7 @@ in multiple categories.
 |Estimated difficulty | Hard|
 |Potential mentors    | [Dale Wijnand] , [Fengyun Liu]|
 
-### Scaladoc: backlinks and smart snippets
+### Scaladoc backlinks and smart snippets
 
 |Title                | Scaladoc: backlinks and smart snippets|
 |---------------------|-|
