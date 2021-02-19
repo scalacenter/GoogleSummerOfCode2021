@@ -1,7 +1,14 @@
 ﻿# Scala Center - Google Summer of Code 2021
 
-## Introduction
+## Summary & goals
 
+[The Scala Center](https://scala.epfl.ch/) organisation and its team are dedicated to moving a needle towards a more diverse community, (amongst other) by providing easy-to-access first experience and introduction to the Scala ecosystem. GSoC is a fantastic opportunity to engage with students all around the world and onboard new generations, as well as underrepresented groups in tech!
+
+Scala is a part of Google Summer of Code since 2010. With 65 projects & students, ~70 mentors over the years, many of whom continued contributing to Scala, we are happy to announce that in 2021 the Scala Center will reignite the collaboration and commit to providing an awesome experience going forward.
+
+These are especially exciting times: Scala 3 has been released mid-February 2021, after 8 years of development. We invite you to chose your project and enjoy the fresh new approach!
+
+## More about the history
 In the past [LAMP](https://www.epfl.ch/labs/lamp/), the lab behind the
 development of Scala at EPFL, invested a lot of time and effort into GSOC,
 mentoring an average of 8 students every year and having participated in 9
