@@ -7,7 +7,7 @@
 
 Scala is a part of Google Summer of Code since 2010. With 65 projects & students, ~70 mentors over the years, many of whom continued contributing to Scala, we are happy to announce that in 2021 the Scala Center will reignite the collaboration and commit to providing an awesome experience going forward.
 
-These are especially exciting times: Scala 3 has been released mid-February 2021, after 8 years of development. We invite you to chose your project and enjoy the fresh new approach!
+These are especially exciting times: Scala 3-RC1 has been released mid-February 2021, after 8 years of development. We invite you to chose your project and enjoy the fresh new approach!
 
 ## More about the history
 In the past [LAMP](https://www.epfl.ch/labs/lamp/), the lab behind the
