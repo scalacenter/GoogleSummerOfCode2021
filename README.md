@@ -1,6 +1,110 @@
-﻿# Scala Center - Google Summer of Code 2021 Project Ideas
+﻿# Scala Center - Google Summer of Code 2021
 
-## Scala-native-bindgen
+## Introduction
+
+In the past [LAMP](https://www.epfl.ch/labs/lamp/), the lab behind the
+development of Scala at EPFL, invested a lot of time and effort into GSOC,
+mentoring an average of 8 students every year and having participated in 9
+editions of the program starting as early as 2010. In the last 2 editions a
+lack of human resources and the development of Scala 3 prevented Scala from
+participating in GSOC.
+
+The Scala Center, a not-for-profit organization with the mission of open
+source and education, decided to take over and restart the long tradition of
+students entering our community thanks to GSOC. We collected as much
+experience and advice as possible from LAMP and from both students and
+mentors from previous editions and we are organizing the 2021 edition.
+
+We hope that our project list will inspire a motivated, diverse and
+open-minded team of students to become part of our community by spending a
+few months working on major open source projects focusing on topics such as
+developer tooling, data science, concurrent computing, metaprogramming, user
+interfaces, education and functional programming.
+
+### Resources
+
+- Find out who we are on the [Scala Center website](https://scala.epfl.ch/)
+- To know more about Google Summer of Code, please visit [the website of the event](https://summerofcode.withgoogle.com/).
+
+## Table of Contents
+
+ - [scala-native-bindgen](#scala-native-bindgen)
+ - [Make scalajs-jfe production-ready](#Make-scalajs-jfe-production-ready)
+ - [Module splitting in scalajs-bundler](#Module-splitting-in-scalajs-bundler)
+ - [Port shapeless-2.x to Scala 3](#Port-shapeless-2.x-to-Scala-3)
+ - [Semantic highlighting for Scala code in Metals](#Semantic-highlighting-for-Scala-code-in-Metals)
+ - [Add missing LSP extensions to Metals](#Add-missing-LSP-extensions-to-Metals)
+ - [Add synthetics and symbol information for semanticdb in Scala 3](#Add-synthetics-and-symbol-information-for-semanticdb-in-Scala-3)
+ - [Interoperability with Java Language server](#Interoperability-with-Java-Language-server)
+ - [Automatically rerun tests on code changes within Metals LSP server](#Automatically-rerun-tests-on-code-changes-within-Metals-LSP-server)
+ - [Automatic imports of implicits](#Automatic-imports-of-implicits)
+ - [Integration of the scala-debug-adapter in Mill](#Integration-of-the-scala-debug-adapter-in-Mill)
+ - [Implement compilation progress in sbt](#Implement-compilation-progress-in-sbt)
+ - [Improve the Scaladex UX and UI](#Improve-the-Scaladex-UX-and-UI)
+ - [Course Management Tools - Apply Enhancements](#Course-Management-Tools---Apply-Enhancements)
+ - [Coursier - Autocompletion](#Coursier---Autocompletion)
+ - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
+ - [Implement support for some scientific computing libraries in Scala 3](#Implement-support-for-some-scientific-computing-libraries-in-Scala-3)
+ - [Exhaustivity check for abstract ADTs](#Exhaustivity-check-for-abstract-ADTs)
+ - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+ - [ScalaPy support in Ammonite and Almond](#ScalaPy-support-in-Ammonite-and-Almond)
+ - [Support for Jupyter-aware Python libraries in ScalaPy](#Support-for-Jupyter-aware-Python-libraries-in-ScalaPy)
+ - [Type Facade Generation](#Type-Facade-Generation)
+ - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
+ - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
+ - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
+
+## By topic
+
+The following organisation of projects ideas by topic provides a quicker way
+to help you find the most interesting project for you. Some projects appear
+in multiple categories.
+
+ - Compiling and metaprogramming:
+    - [scala-native-bindgen](#scala-native-bindgen)
+    - [Module splitting in scalajs-bundler](#Module-splitting-in-scalajs-bundler)
+    - [Make scalajs-jfe production-ready](#Make-scalajs-jfe-production-ready)
+    - [Port shapeless-2.x to Scala 3](#Port-shapeless-2.x-to-Scala-3)
+    - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
+    - [Exhaustivity check for abstract ADTs](#Exhaustivity-check-for-abstract-ADTs)
+    - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+    - [Type Facade Generation](#Type-Facade-Generation)
+    - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
+    - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
+    - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
+    - [Implement support for some scientific computing libraries in Scala 3](#Implement-support-for-some-scientific-computing-libraries-in-Scala-3)
+ - Developer tools
+    - [Semantic highlighting for Scala code in Metals](#Semantic-highlighting-for-Scala-code-in-Metals)
+    - [Add missing LSP extensions to Metals](#Add-missing-LSP-extensions-to-Metals)
+    - [Add synthetics and symbol information for semanticdb in Scala 3](#Add-synthetics-and-symbol-information-for-semanticdb-in-Scala-3)
+    - [Interoperability with Java Language server](#Interoperability-with-Java-Language-server)
+    - [Automatically rerun tests on code changes within Metals LSP server](#Automatically-rerun-tests-on-code-changes-within-Metals-LSP-server)
+    - [Automatic imports of implicits](#Automatic-imports-of-implicits)
+    - [Integration of the scala-debug-adapter in Mill](#Integration-of-the-scala-debug-adapter-in-Mill)
+    - [Implement compilation progress in sbt](#Implement-compilation-progress-in-sbt)
+    - [Coursier - Autocompletion](#Coursier---Autocompletion)
+    - [Write a compatible `ExplicitResultTypes` rule for Scala 3](#Write-a-compatible-`ExplicitResultTypes`-rule-for-Scala-3)
+ - User experience
+    - [Improve the Scaladex UX and UI](#Improve-the-Scaladex-UX-and-UI)
+    - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
+    - [Scaladoc: backlinks and smart snippets](#Scaladoc:-backlinks-and-smart-snippets)
+    - [Implement compilation progress in sbt](#Implement-compilation-progress-in-sbt)
+    - [Coursier - Autocompletion](#Coursier---Autocompletion)
+ - Education
+    - [Course Management Tools - Apply Enhancements](#Course-Management-Tools---Apply-Enhancements)
+ - Data
+    - [Implement support for some scientific computing libraries in Scala 3](#Implement-support-for-some-scientific-computing-libraries-in-Scala-3)
+    - [ScalaPy support in Ammonite and Almond](#ScalaPy-support-in-Ammonite-and-Almond)
+    - [Support for Jupyter-aware Python libraries in ScalaPy](#Support-for-Jupyter-aware-Python-libraries-in-ScalaPy)
+    - [Type Facade Generation](#Type-Facade-Generation)
+ - Perfomances and concurrency
+    - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
+    - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
+
+
+## Project ideas
+
+### Scala-native-bindgen
 
 |Title                |Scala-native-bindgen|
 |---------------------|-|
@@ -10,7 +114,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Wojciech Mazur] |
 
-## Make scalajs-jfe production-ready
+### Make scalajs-jfe production-ready
 
 |Title                | Make scalajs-jfe production-ready|
 |---------------------|-|
@@ -21,7 +125,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Sébastien Doeraene]|
 
-## Module splitting in scalajs-bundler
+### Module splitting in scalajs-bundler
 
 |Title                |	Module splitting in scalajs-bundler|
 |---------------------|-|
@@ -31,7 +135,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Sébastien Doeraene], [Julien Richard-Foy]|
 
-## Port shapeless-2.x to Scala 3
+### Port shapeless-2.x to Scala 3
 
 |Title                |Port shapeless-2.x to Scala 3|
 |---------------------|-|
@@ -41,7 +145,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Julien Richard-Foy]|
 
-## Semantic highlighting for Scala code in [Metals]
+### Semantic highlighting for Scala code in Metals
 
 |Title                | Semantic highlighting for Scala code in [Metals]|
 |---------------------|-|
@@ -51,7 +155,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Tomasz Godzik], [Chris Kipp]|
 
-## Add missing LSP extensions to [Metals]
+### Add missing LSP extensions to Metals
 
 |Title                | Add missing LSP extensions to [Metals]|
 |---------------------|-|
@@ -61,7 +165,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Chris Kipp]|
 
-## Add synthetics and symbol information for semanticdb in Scala 3
+### Add synthetics and symbol information for semanticdb in Scala 3
 
 |Title                | Add synthetics and symbol information for semanticdb in Scala 3|
 |---------------------|-|
@@ -71,7 +175,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Tomasz Godzik] |
 
-## Automatically rerun tests on code changes within [Metals] LSP server
+### Automatically rerun tests on code changes within Metals LSP server
 
 |Title                | Automatically rerun tests on code changes within [Metals] LSP server|
 |---------------------|-|
@@ -81,7 +185,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Tomasz Godzik]|
 
-## Interoperability with Java Language server
+### Interoperability with Java Language server
 
 |Title                | Interoperability with Java Language server|
 |---------------------|-|
@@ -91,7 +195,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Tomasz Godzik]|
 
-## Automatic imports of implicits
+### Automatic imports of implicits
 
 |Title                | Automatic imports of implicits|
 |---------------------|-|
@@ -101,7 +205,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Tomasz Godzik]|
 
-## Integration of the scala-debug-adapter in [Mill]
+### Integration of the scala-debug-adapter in Mill
 
 |Title                | Integration of the scala-debug-adapter in [Mill]|
 |---------------------|-|
@@ -111,7 +215,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Adrien Piquerez]|
 
-## Implement compilation progress in sbt
+### Implement compilation progress in sbt
 
 |Title                | Implement compilation progress in sbt|
 |---------------------|-|
@@ -121,7 +225,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Adrien Piquerez]|
 
-## Improve the [Scaladex] UX and UI
+### Improve the Scaladex UX and UI
 
 |Title                | Improve the [Scaladex] UX and UI|
 |---------------------|-|
@@ -131,7 +235,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    |[Adrien Piquerez]|
 
-## Course Management Tools - Apply Enhancements
+### Course Management Tools - Apply Enhancements
 
 |Title                | Course Management Tools - Apply Enhancements|
 |---------------------|-|
@@ -141,7 +245,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Eric Loots]|
 
-## [Coursier] - Autocompletion
+### Coursier - Autocompletion
 
 |Title                | [Coursier] - Autocompletion|
 |---------------------|-|
@@ -151,7 +255,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors     | [Eric Loots], [Alexandre Archambault]|
 
-## Write a compatible `ExplicitResultTypes` rule for Scala 3
+### Write a compatible `ExplicitResultTypes` rule for Scala 3
 
 |Title                | Write a compatible `ExplicitResultTypes` rule for Scala 3|
 |---------------------|-|
@@ -161,7 +265,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Meriam Lachkar]|
 
-## Implement support for some scientific computing libraries in Scala 3
+### Implement support for some scientific computing libraries in Scala 3
 
 |Title                | Implement support for some scientific computing libraries in Scala 3|
 |---------------------|-|
@@ -171,7 +275,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Anatolii Kmetiuk], [Alexandre Archambault], [Shadaj Laddad] |
 
-## Exhaustivity check for abstract ADTs
+### Exhaustivity check for abstract ADTs
 
 |Title                | Exhaustivity check for abstract ADTs|
 |---------------------|-|
@@ -181,7 +285,7 @@
 |Estimated difficulty | Hard|
 |Potential mentors    | [Dale Wijnand] , [Fengyun Liu]|
 
-## Scaladoc: backlinks and smart snippets
+### Scaladoc: backlinks and smart snippets
 
 |Title                | Scaladoc: backlinks and smart snippets|
 |---------------------|-|
@@ -191,7 +295,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Aleksander Boruch-Gruszecki]|
 
-## [ScalaPy] support in [Ammonite] and [Almond]
+### ScalaPy support in Ammonite and Almond
 
 |Title                | [ScalaPy] support in [Ammonite] and [Almond]|
 |---------------------|-|
@@ -202,7 +306,7 @@
 |Potential mentors    | [Alexandre Archambault]|
 
 
-## Support for Jupyter-aware Python libraries in [ScalaPy]
+### Support for Jupyter-aware Python libraries in ScalaPy
 
 |Title                | Support for Jupyter-aware Python libraries in [ScalaPy]|
 |---------------------|-|
@@ -212,7 +316,7 @@
 |Estimated difficulty | Medium|
 |Potential mentors    | [Shadaj Laddad], [Alexandre Archambault] |
 
-## Type Facade Generation
+### Type Facade Generation
 
 |Title                | Type Facade Generation|
 |---------------------|-|
@@ -222,7 +326,7 @@
 |Estimated difficulty | Medium/Hard|
 |Potential mentors    | [Shadaj Laddad]|
 
-## Porting [Monix] to Scala 3
+### Porting Monix to Scala 3
 
 |Title                | Porting [Monix] to Scala 3|
 |---------------------|-|
@@ -232,7 +336,7 @@
 |Estimated difficulty | Medium |
 |Potential mentors    | [Lars Hupel]|
 
-## Improving performance of type class operators
+### Improving performance of type class operators
 
 |Title                | Improving performance of type class operators|
 |---------------------|-|
@@ -242,6 +346,15 @@
 |Estimated difficulty | Hard |
 |Potential mentors    | [Lars Hupel]|
 
+### Runnable and embeddable snippets for Scala 3
+
+|Title                | Runnable and embeddable snippets for Scala 3|
+|---------------------|-|
+|Brief description    | [Scastie] is an online REPL for Scala. The tool provides a good way to be embed snippets within websites containing documentation, tutorials or blosposts. Tools such as scaladoc should be able to precompile and embed the snippets with provided settings like classpath or compiler options. Compiling and running many snippets may require quite a lot of resources so some effort should be put to create a set of caches or to offload parts of work into tools such as scaladoc.|
+|Expected outcome     | Ability to embed Scastie-powered snippets into any web page as well as integration with scaladoc 3.x|
+|Prerequisites        | Knowledge of Scala as well as front-end development|
+|Estimated difficulty | Medium|
+|Potential mentors    | [Krzysztof Romanowski], Marcin Amman|
 
 [Almond]: https://almond.sh/
 [Ammonite]: https://ammonite.io/
@@ -256,6 +369,7 @@
 [ScalaPy]: https://scalapy.dev/
 [Scaladex]: https://index.scala-lang.org/
 [Scalafix]: https://scalacenter.github.io/scalafix/
+[Scastie]: https://scastie.scala-lang.org/
 [Shapeless]: https://github.com/milessabin/shapeless
 [Spire]: https://github.com/typelevel/spire
 [Zinc]: https://github.com/sbt/zinc
@@ -275,3 +389,4 @@
 [Sébastien Doeraene]: https://github.com/sjrd
 [Tomasz Godzik]: https://github.com/tgodzi
 [Wojciech Mazur]: https://github.com/WojciechMazur
+[Krzysztof Romanowski]: https://github.com/romanowski 
