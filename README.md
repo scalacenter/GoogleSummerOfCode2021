@@ -354,13 +354,13 @@ in multiple categories.
 |Expected outcome     | Ability to embed Scastie-powered snippets into any web page as well as integration with scaladoc 3.x|
 |Prerequisites        | Knowledge of Scala as well as front-end development|
 |Estimated difficulty | Medium|
-|Potential mentors    | [Krzysztof Romanowski], [Marcin Aman]|
+|Potential mentors    | [Krzysztof Romanowski], [Mateusz Ziarko]|
 
 [Almond]: https://almond.sh/
 [Ammonite]: https://ammonite.io/
 [Cats Effect]: https://typelevel.org/cats-effect/
 [Cats]: https://typelevel.org/cats/
-[Coursier]: https://get-coursier.io/ 
+[Coursier]: https://get-coursier.io/
 [Metals]: https://scalameta.org/metals/
 [Mill]: http://www.lihaoyi.com/mill/
 [Monix]: https://monix.io/
@@ -383,11 +383,12 @@ in multiple categories.
 [Eric Loots]: https://github.com/eloot
 [Fengyun Liu]: https://github.com/liufengyun
 [Julien Richard-Foy]: https://github.com/julienrf
-[Krzysztof Romanowski]: https://github.com/romanowski 
+[Krzysztof Romanowski]: https://github.com/romanowski
 [Lars Hupel]: https://github.com/larsrh
-[Marcin Aman]: https://github.com/MarcinAman
+[Mateusz Ziarko]: https://github.com/cyp3rius
 [Meriam Lachkar]: https://github.com/mlachkar
 [Shadaj Laddad]: https://github.com/shadaj
 [Sébastien Doeraene]: https://github.com/sjrd
 [Tomasz Godzik]: https://github.com/tgodzi
 [Wojciech Mazur]: https://github.com/WojciechMazur
+
