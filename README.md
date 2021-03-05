@@ -62,6 +62,8 @@ interfaces, education and functional programming.
  - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
  - [Runnable and embeddable snippets for Scala 3](#Runnable-and-embeddable-snippets-for-Scala-3)
  - [Integrating Metals with bazel-bsp](#Integrating-Metals-with-bazel-bsp)
+ - [Creative Coding in Scala](#Creative-Coding-in-Scala)
+ - [A Diversity-oriented Scala Curriculum](#A-Diversity-oriented-Scala-curriculum)
 
 ## By topic
 
@@ -102,12 +104,14 @@ in multiple categories.
     - [Coursier - Autocompletion](#Coursier---Autocompletion)
  - Education
     - [Course Management Tools - Apply Enhancements](#Course-Management-Tools---Apply-Enhancements)
+    - [A Diversity-oriented Scala Curriculum](#A-Diversity-oriented-Scala-curriculum)
  - Data
     - [Implement support for some scientific computing libraries in Scala 3](#Implement-support-for-some-scientific-computing-libraries-in-Scala-3)
     - [ScalaPy support in Ammonite and Almond](#ScalaPy-support-in-Ammonite-and-Almond)
     - [Support for Jupyter-aware Python libraries in ScalaPy](#Support-for-Jupyter-aware-Python-libraries-in-ScalaPy)
     - [Type Facade Generation](#Type-Facade-Generation)
- - Perfomances and concurrency
+    - [Creative Coding in Scala](#Creative-Coding-in-Scala)
+ - Performance and concurrency
     - [Porting Monix to Scala 3](#Porting-Monix-to-Scala-3)
     - [Improving performance of type class operators](#Improving-performance-of-type-class-operators)
 
@@ -376,6 +380,30 @@ in multiple categories.
 |Estimated difficulty | Medium |
 |Potential mentors    | [Felix Mulder]|
 
+### Creative Coding in Scala
+
+|Title                | Creative Coding in Scala |
+|---------------------|-|
+|Brief description    | Creative coding is the practice of writing code for some artistic result. Scala has a creative coding 2D graphics library called [Doodle](https://creativescala.com/doodle/index.html). The goal of this project is to extend Doodle to allow more creative coding possibilities.                                                There are many enhancements that would both benefit Doodle and form a well-defined project, such as: adding support for bitmap graphics;                                                      adding basic support for data visualisation; building backend specific features, such as converting fonts to paths in the Java2D backend, or adding filters in the SVG backend.                               |
+|Expected outcome     | A complete implementation of the chosen project, including code, tests, and documentation. |
+|Prerequisites        | Intermediate Scala knowledge, interest in creative coding or data visualisation, and interest in functional programming idioms. |                                    |Ideal Prerequisites  | Some background knowledge of graphics toolkits will be useful for most projects. |
+|Programming Skills   | Most of Doodle is standard Scala. There are two areas that require some  specialist knowledge (which I expect students could pick up): 1. backend specific knowledge (e.g. SVG, Java2D) and 2. tagless final style. |
+|Estimated difficulty |    Medium    |
+|Potential mentors    |   [Noel Welsh] |
+
+### A Diversity-oriented Scala Curriculum
+
+|Title                | A Diversity-oriented Scala Curriculum |
+|---------------------|-|
+|Brief description    | [ScalaBridge](https://scalabridgelondon.org/) aims to increase diversity within the Scala community by teaching Scala to people who are currently under-represented. Now in its third year, it is clear that ScalaBridge would benefit from a more structured curriculum. The goal of this project is to define that curriculum. |
+|Expected outcome     | There are 3 expected outcomes: 1. Define what a lesson plan looks like for ScalaBridge. 2. Define a curriculum plan covering learning goals and exercise concepts to take students from complete beginners to having sufficient Scala knowledge to work as junior developers. 3. Develop content for at least a portion of the curriculum. This will include software development, written content, and possibly video content. |
+|Prerequisites        | Intermediate Scala knowledge, good standard of written English, and an interest in pedagogy and teaching. |
+|Ideal Prerequisites  | Some familiarity with web technologies (HTML, CSS, etc.) may be useful to present course material. |
+|Programming Skills   | General Scala knowledge is sufficient. |
+|Estimated difficulty |    Medium    |
+|Ppotential mentors   |   [Noel Welsh] |
+
+
 [Almond]: https://almond.sh/
 [Ammonite]: https://ammonite.io/
 [Cats Effect]: https://typelevel.org/cats-effect/
@@ -408,6 +436,7 @@ in multiple categories.
 [Lars Hupel]: https://github.com/larsrh
 [Mateusz Ziarko]: https://github.com/cyp3rius
 [Meriam Lachkar]: https://github.com/mlachkar
+[Noel Welsh]: https://github.com/noelwelsh
 [Shadaj Laddad]: https://github.com/shadaj
 [Sébastien Doeraene]: https://github.com/sjrd
 [Tomasz Godzik]: https://github.com/tgodzi
