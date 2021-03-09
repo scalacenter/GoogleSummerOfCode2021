@@ -401,7 +401,7 @@ in multiple categories.
 |Ideal Prerequisites  | Some familiarity with web technologies (HTML, CSS, etc.) may be useful to present course material. |
 |Programming Skills   | General Scala knowledge is sufficient. |
 |Estimated difficulty |    Medium    |
-|Ppotential mentors   |   [Noel Welsh] |
+|Potential mentors   |   [Noel Welsh] |
 
 
 [Almond]: https://almond.sh/
