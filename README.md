@@ -439,5 +439,5 @@ in multiple categories.
 [Noel Welsh]: https://github.com/noelwelsh
 [Shadaj Laddad]: https://github.com/shadaj
 [Sébastien Doeraene]: https://github.com/sjrd
-[Tomasz Godzik]: https://github.com/tgodzi
+[Tomasz Godzik]: https://github.com/tgodzik
 [Wojciech Mazur]: https://github.com/WojciechMazur
